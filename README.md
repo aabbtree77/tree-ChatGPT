@@ -74,18 +74,18 @@ Rewrite this in F#. Use idiomatic FP, as much immutability as possible, null saf
 	val findValue: tree : Tree<'a> -> value: 'a (requires equality ) -> option<'a>
 	```
 
-## Conclusions
+## Random Thoughts
 
 - It would certainly be interesting to study more of type inference in action (F#, Rust, Roc?), witness various levels of it, edge cases.
 
 - This demo code does not reveal the cons of type inference, e.g. nasty compiler errors. Gleam uses only generic types for a reason.
 
-- I have no clue about the type inference in TypeScript, but type annotations are typically written manually there.
+- Type annotations are typically written manually in TypeScript and Rust.
 
 - F# looks better, but TypeScript is not bad at all here. 
 
-- In a way, TypeScript shows what would happen to Go if we removed pointers, added sum types, imposed default non-nullability on reference types, without going all the way to pattern matching.
+- TypeScript shows what would happen to Go if we removed pointers, added sum types, imposed default non-nullability on reference types, without going all the way with type constructors and pattern matching.
 
-- Compare the codes yourself and see whether you find TypeScript disgusting, or a decent approximation. The problem is that the answer is unlikely to be found here. It lies in a deeper experience with type inference and compiler errors.
+- Compare the codes yourself and see whether you find TypeScript disgusting, or a decent approximation. The problem is that the answer is unlikely to be found in small code demos. It lies in a deeper experience with type inference and compiler errors. F#/Roc vs Gleam... ChatGPT might have some answers too.
 
 - I was hoping for some immutable trees as mentioned in [Sect. 3.4.1 Persistence and Immutability in A History of Clojure (2020).](https://dl.acm.org/doi/pdf/10.1145/3386321) However, ChatGPT would not do that with a simple prompt formulated above. It would have to be pushed harder, likely with a lot of iterations.
